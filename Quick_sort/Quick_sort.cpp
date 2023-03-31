@@ -71,4 +71,17 @@ void q_short(int low, int high)
 		}
 		cmp_count++;
 	}
+	//Langkah 9
+	if (i < j) // if the greater element is on the left of the element
+	{
+		//swap the element at index i whit the element at index j
+		swap(i, j);
+		mov_count++;
+	}
+	//sort the list on the left of pivot using quck sort
+	q_short(low, j - 1);							//langkah 12
+
+	//sort the list on the right of pivot using quick sort
+	q_short(j + 1, high);							//langkah 13
+}
 
